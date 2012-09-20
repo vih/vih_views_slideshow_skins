@@ -1,0 +1,26 @@
+<?php
+/**
+ * Implements hook_views_slideshow_skin_info().
+ */
+function vih_views_slideshow_skins_views_slideshow_skin_info() {
+  return array(
+    'vih_content_width' => array(
+      'name' => t('VIH Content Width')
+    )
+  );
+}
+
+/**
+ * Implements hook_views_slideshow_skins().
+ */
+function vih_views_slideshow_skins_views_slideshow_skins() {
+  $skins['vih_content_width'] = array(
+    'class' => 'vih-slideshow-content-width',
+    'title' => t('VIH Content Width'),
+    'module' => 'vih_views_slideshow_skins',
+    'path' => 'skins',
+    'stylesheets' => array('content-width.css'),
+  );
+
+  return $skins;
+}
